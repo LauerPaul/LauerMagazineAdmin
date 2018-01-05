@@ -1,0 +1,39 @@
+/* left menu gray */
+.left-menu {
+	background: $menu-bg-g;
+	
+	// logo wrapper
+	.logo-wrapper {
+		a {
+			color: $white;
+			
+			> span {
+				color: rgba(255,255,255,0.9);
+				
+				> span {
+					color: rgba(255,255,255,0.6);
+				}
+			}
+		}
+	}
+
+	// user-info
+	.user-info {
+		background: $lm-info-user-bg-g;
+		
+		.avatar-wrapper {
+			&::before {
+				background: rgba(255,255,255,.25);
+			}
+		}
+
+		.login {
+			color: rgba(255,255,255,0.9);
+		}
+
+		.root {
+			color: rgba(255,255,255,0.5);
+		}
+	}
+
+}

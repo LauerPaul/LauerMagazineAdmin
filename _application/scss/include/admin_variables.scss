@@ -1,0 +1,13 @@
+// Variables
+// ---------
+
+$img: '../../images/';
+$img_tmp: $img + 'tmp/';
+
+// wrapper
+$w-padding-t-b: 60px; // padding top & bottom wrapper
+$w-second-padding: $w-padding-t-b / 2;
+
+// left-menu
+$lm-max-width: 352px; // left menu max-width
+$lm-avatar-size: 70px; //height & width avatar

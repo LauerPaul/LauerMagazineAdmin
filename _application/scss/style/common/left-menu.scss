@@ -1,0 +1,88 @@
+/* left menu */
+.left-menu {
+	width: 100%;
+	max-width: $lm-max-width;
+	height: 100%;
+	padding-left: $w-second-padding / 1.5;
+	padding-right: $w-second-padding / 1.5;
+	box-sizing: border-box;
+	
+	// logo wrapper
+	.logo-wrapper {
+		width: 100%;
+		height: $w-padding-t-b;
+		
+		a {
+			outline: none;
+			text-decoration: none;
+			box-shadow: none;
+			
+			&:hover {
+				text-decoration: none;
+			}
+
+			> span {
+				font-weight: bold;
+				font-size: 1.3rem;
+				
+				> span {
+					font-size: 0.9rem;
+				}
+			}
+		}
+	}
+
+	// user-info
+	.user-info {
+		width: calc(100% + #{$w-second-padding / 4});
+		min-height: 50px;
+		padding-top: $w-second-padding /2;
+		padding-bottom: $w-second-padding /2;
+		padding-left: $w-second-padding / 1.5;
+		margin-left: -#{$w-second-padding / 1.5};
+		margin-right: -#{$w-second-padding / 1.5};
+		
+		.avatar-wrapper {
+			width: $lm-avatar-size;
+			height: $lm-avatar-size;
+			float: left;
+			position: relative;
+			z-index: 1;
+			margin-top: 7px;
+			margin-left: 7px;
+			margin-right: $w-second-padding / 1.5;
+			
+			&::before {
+				content: '';
+				width: $lm-avatar-size;
+				height: $lm-avatar-size;
+				position: absolute;
+				z-index: 0;
+				display: block;
+				left: -7px;
+				top: -7px;
+			}
+
+			.avatar {
+			    position: relative;
+			    z-index: 1;
+			    width: $lm-avatar-size;
+				height: $lm-avatar-size;
+				overflow: hidden;
+			    
+			    img {
+			    	width: 100%;
+			    }
+			}
+		}
+
+		.float-left {
+			max-width: calc(100% - (#{$lm-avatar-size + $w-second-padding / 1.5} + 7px));
+			width: 100%;
+			padding-right: $w-second-padding / 1.5;
+		}
+	}
+
+}
+
+@import "left-menu-gray";

@@ -5,7 +5,12 @@ dev. Pavel Ugrynovych (Lauer - lauer.com.ua)
 ------------------------------------------ */
 /* ----------- Bootstrap -------------- */
 @import "include/_variables";
+@import "include/admin_variables";
+@import "include/gray_variables";
 @import "bootstrap";
 @import "hover";
 @import "include/_mixin";
 /* -------- *Bootstrap END* ----------- */
+@import "style/theme";
+
+@import "style/common/left-menu";
