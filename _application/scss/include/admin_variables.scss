@@ -1,13 +1,30 @@
 // Variables
 // ---------
-
-$img: '../../images/';
-$img_tmp: $img + 'tmp/';
+$img: 			'../../images/';
+$img_tmp: 		$img + 'tmp/';
+$fa-font-path:	"../../fonts/FontAwesome" !default;
+// grid
+$_xs: 0;
+$_sm: 576px;
+$_md: 768px;
+$_lg: 992px;
+$_xl: 1200px;
+// colors
+$gray: 			#adb7be;
+$c-gray: 		rgba(0,0,0,.48);
+$black:			#212529;
+// ---------
+$font: 			$font-family-sans-serif;
+// ---------
 
 // wrapper
-$w-padding-t-b: 60px; // padding top & bottom wrapper
-$w-second-padding: $w-padding-t-b / 2;
+$w-padding-t-b: 	60px; // padding top & bottom wrapper
+$w-padding-t-b_xl: 	50px; // padding top & bottom wrapper
+$w-second-padding: 	$w-padding-t-b / 2;
 
 // left-menu
-$lm-max-width: 352px; // left menu max-width
-$lm-avatar-size: 70px; //height & width avatar
+$lm-max-width: 		240px; // left menu max-width
+$lm-max-width_xl: 	200px; // left menu max-width
+
+// header
+$h-avatar-size: 38px; //height & width avatar

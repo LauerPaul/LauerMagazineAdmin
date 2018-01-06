@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&subset=cyrillic,cyrillic-ext');
 @import "include/animate";
 /* ---------------------------------------
 Copyright 2017©ortodonts.ru
@@ -8,9 +9,11 @@ dev. Pavel Ugrynovych (Lauer - lauer.com.ua)
 @import "include/admin_variables";
 @import "include/gray_variables";
 @import "bootstrap";
+@import "font-awesome";
 @import "hover";
 @import "include/_mixin";
 /* -------- *Bootstrap END* ----------- */
 @import "style/theme";
 
 @import "style/common/left-menu";
+@import "style/common/header";

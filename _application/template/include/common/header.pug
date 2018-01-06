@@ -1,5 +1,25 @@
-header
-	.logo-wrapper.d-flex.justify-content-center.align-items-center
+header.d-flex.justify-content-between
+	.logo-wrapper.d-flex.align-items-center
 		a(href="/")
-			span.decoration cubeGray&nbsp;
-				span.mini admin panel
+			img(src="images/tmp/logo.jpg")
+	.float-right.d-flex.align-items-center
+		// notify
+		.notify-wrapper
+			a(href="#")
+				i.fa.fa-bell
+		// user wrapper
+		.user-wrapper.d-flex.align-items-center.dropdown
+			.dropdown-toggle#dropdownAvatar(data-toggle="dropdown", aria-haspopup="true", aria-expanded="false").d-flex.align-items-center
+				.avatar-wrapper
+					img(src="images/tmp/no-image.gif")
+			.dropdown-menu.dropdown-menu-right(aria-labelledby="dropdownAvatar")
+				a(href="#").dropdown-item 
+					i.fa.fa-user-circle
+					|Profile
+				a(href="#").dropdown-item
+					i.fa.fa-cogs
+					|Settings
+				.dropdown-divider
+				a(href="#").dropdown-item
+					i.fa.fa-sign-out
+					|Logout

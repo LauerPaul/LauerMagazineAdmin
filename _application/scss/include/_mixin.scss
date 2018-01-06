@@ -95,3 +95,9 @@
     -webkit-box-orient: vertical;
     max-height: $b;
 }
+
+@mixin media_max_w($size){
+    @media (max-width: #{$size}) {
+        @content;
+    }
+}

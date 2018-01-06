@@ -1,0 +1,32 @@
+// logo wrapper
+.logo-wrapper {
+	a {
+		color: $border-color-g;
+		
+		> span {
+			color: darken($border-color-g, 25%);
+			
+			> span {
+				color: darken($blue, 3%);
+			}
+		}
+	}
+}
+
+// user-wrapper
+.user-wrapper {
+	.dropdown-toggle::after {
+		color: $border-color-g;
+		margin-left: 0px;
+	}
+
+	&:hover {
+		.dropdown-toggle::after {
+			color: $blue;
+		}
+	}
+
+	.avatar-wrapper {
+		border: 1px solid $border-color-g;
+	}
+}
