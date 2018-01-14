@@ -1,0 +1,43 @@
+section.box-typical.scrollable.srcollInit
+	table.table.table-striped#categories
+		thead.thead-inverse
+			tr
+				th.text-center
+					i.fa.fa-eye
+				th ID
+				th Category name
+				th Parent category
+				th
+					a.btn.btn-success.btn-md(href="category_edit.html")
+						i.fa.fa-plus &nbsp;Add
+		tbody
+			tr
+				td.text-center
+					i.fa.fa-eye-slash.red
+				td 1
+				td
+					strong Sneakers
+				td Footwear
+				td.text-right
+					.btn-group.control-group
+						a.btn.btn-success.btn-md(href="#")
+							i.fa.fa-pencil
+
+						a.btn.btn-danger.btn-md(href="#")
+							i.fa.fa-trash-o
+			tr
+				td.text-center
+					i.fa.fa-eye.green
+				td 2
+				td
+					strong Footwear
+				td
+					span.gray -
+				td.text-right
+					.btn-group.control-group
+						a.btn.btn-success.btn-md(href="#")
+							i.fa.fa-pencil
+
+						a.btn.btn-danger.btn-md(href="#")
+							i.fa.fa-trash-o
+	nav#paging-table.pagination-datatables.text-center

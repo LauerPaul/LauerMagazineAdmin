@@ -1,4 +1,5 @@
 // left menu
+.mask-mobile-lm
 .left-menu
 	.wrapper-list
 		.item
@@ -9,15 +10,34 @@
 			a(href="#")
 				i.fa.fa-th-large
 				|Modules
-		.item.red
-			a(href="#")
+		.item.red.list
+			span
 				i.fa.fa-th-list
 				|Catalog
-		.item.blue.active
-			a(href="#")
+			ul
+				li
+					a(href="products.html") Products
+				li
+					a(href="categories.html") Categories
+				li
+					a(href="options.html") Products options
+				li
+					a(href="filters.html") Filters
+		.item.blue.list.active.open
+			span
 				i.fa.fa-group
 				|Users
-		.item.green
-			a(href="#")
+			ul
+				li
+					a(href="#") Admins
+				li
+					a(href="#") Сustomers
+		.item.green.list
+			span
 				i.fa.fa-gear
 				|Settings
+			ul
+				li
+					a(href="#") Mail
+				li
+					a(href="#") Configs

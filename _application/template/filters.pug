@@ -1,0 +1,21 @@
+html(lang='ru')
+	include include/common/head
+	body
+		.wrapper-cube.gray-style
+			include include/common/header
+			include include/common/left-menu
+			
+			.container-fluid.not-padding
+				.row
+					ol.breadcrumb
+						li.breadcrumb-item
+							a(href="#") Home
+						li.breadcrumb-item.active
+							span Catalog
+						li.breadcrumb-item.active Categories
+				.row
+					.col-12.col-md-12
+						include include/catalog/filters_list
+			
+			include include/common/footer
+			script(src='js/filters.js')

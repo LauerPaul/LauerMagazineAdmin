@@ -1,0 +1,296 @@
+
+<html lang="ru">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="language" content="RU"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="icon" type="image/png" href="images/favicon.png"/>
+    <title>Admin panel magazine - style 'GRAY CUBE'</title>
+    <link rel="stylesheet" href="styles/css/main.min.css"/>
+  </head>
+  <body>
+    <div class="wrapper-cube gray-style">
+      <!-- left menu-->
+      <div class="mask-mobile-lm"></div>
+      <div class="left-menu">
+        <div class="wrapper-list">
+          <div class="item"><a href="#"><i class="fa fa-tachometer"></i>Dashboard</a></div>
+          <div class="item purpure"><a href="#"><i class="fa fa-th-large"></i>Modules</a></div>
+          <div class="item red list"><span><i class="fa fa-th-list"></i>Catalog</span>
+            <ul>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="categories.html">Categories</a></li>
+              <li><a href="options.html">Products options</a></li>
+              <li><a href="filters.html">Filters</a></li>
+            </ul>
+          </div>
+          <div class="item blue list active open"><span><i class="fa fa-group"></i>Users</span>
+            <ul>
+              <li><a href="#">Admins</a></li>
+              <li><a href="#">Сustomers</a></li>
+            </ul>
+          </div>
+          <div class="item green list"><span><i class="fa fa-gear"></i>Settings</span>
+            <ul>
+              <li><a href="#">Mail</a></li>
+              <li><a href="#">Configs</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid not-padding">
+        <div class="row">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active"><span>Catalog</span></li>
+            <li class="breadcrumb-item active"><span>Categories</span></li>
+            <li class="breadcrumb-item active">Category edit</li>
+          </ol>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-10">
+            <ul class="nav nav-tabs">
+              <li class="nav-item"><a class="nav-link active" href="#general" data-toggle="tab">General</a></li>
+              <li class="nav-item"><a class="nav-link" href="#data" data-toggle="tab">Data</a></li>
+              <li class="nav-item"><a class="nav-link" href="#seo" data-toggle="tab">SEO</a></li>
+            </ul>
+            <form class="tab-content" action="">
+              <div class="tab-pane active" id="general">
+                <section class="box-typical no-border-top">
+                  <div class="container-fluid">
+                    <div class="form-line">
+                      <div class="row">
+                        <div class="col-md-2">
+                          <div class="d-flex align-items-center height-34"><span class="title">Name</span><span class="red">&nbsp;*</span></div>
+                        </div>
+                        <div class="col-md-10">
+                          <div class="input-group">
+                            <input class="form-control" name="name" placeholder="Name" type="text" required="required"/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-line">
+                      <div class="row">
+                        <div class="col-md-2">
+                          <div class="d-flex align-items-center height-34"><span class="title">Description</span></div>
+                        </div>
+                        <div class="col-md-10">
+                          <div class="input-group">
+                            <textarea class="form-control" name="description" placeholder="description" rows="10"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-line">
+                      <div class="row">
+                        <div class="col-md-2">
+                          <div class="d-flex align-items-center height-34"><span class="title">Status</span></div>
+                        </div>
+                        <div class="col-md-10">
+                          <select class="form-control selectpicker show-tick" name="description">
+                            <option value="1">Enabeled</option>
+                            <option value="0">Disabled</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="tab-pane" id="data">
+                <section class="box-typical no-border-top">
+                  <div class="container-fluid">
+                    <div class="form-line">
+                      <div class="row">
+                        <div class="col-md-2">
+                          <div class="d-flex align-items-center height-34"><span class="title">Parent</span></div>
+                        </div>
+                        <div class="col-md-10">
+                          <div class="input-group">
+                            <input class="form-control autocomplite" name="parent" type="text"/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-line">
+                      <div class="row">
+                        <div class="col-md-2">
+                          <div class="d-flex align-items-center height-34"><span class="title">Filters</span></div>
+                        </div>
+                        <div class="col-md-10">
+                          <div class="input-group">
+                            <select class="form-control selectpicker" name="filters" multiple="multiple" title="Select filters" data-live-search="true">
+                              <option value="1">Filter 1</option>
+                              <option value="2">Filter 2</option>
+                              <option value="3">Filter 3</option>
+                              <option value="4">Filter 4</option>
+                              <option value="5">Filter 5</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-line">
+                      <div class="row">
+                        <div class="col-md-2">
+                          <div class="d-flex align-items-center height-34"><span class="title">Sort</span></div>
+                        </div>
+                        <div class="col-md-10">
+                          <div class="input-group">
+                            <input class="form-control autocomplite" name="sort" type="text"/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-line">
+                      <div class="row">
+                        <div class="col-md-2 col-2">
+                          <div class="d-flex align-items-center height-34"><span class="title">Top</span></div>
+                        </div>
+                        <div class="col-md-10 col-10">
+                          <div class="d-flex align-items-center height-34">
+                            <input name="in_menu" type="checkbox"/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-line">
+                      <div class="row">
+                        <div class="col-md-2">
+                          <div class="d-flex align-items-center height-34"><span class="title">Image</span></div>
+                        </div>
+                        <div class="col-md-10">
+                          <div class="image-wrapper m-w-150"><img class="rounded" src="images/tmp/no-img.png" onclick="$(this).next('input[type=&quot;file&quot;]').click()"/>
+                            <input class="d-none" type="file" accept="" name="img"/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="tab-pane" id="seo">
+                <section class="box-typical no-border-top">
+                  <div class="container-fluid">
+                    <div class="form-line">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <div class="d-flex align-items-center height-34"><span class="title">url</span><span class="red">&nbsp;*</span></div>
+                        </div>
+                        <div class="col-md-9">
+                          <div class="input-group"><span class="input-group-addon" id="basic-addon3">https://site.com/</span>
+                            <input class="form-control" name="url" placeholder="url" type="text"/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-line">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <div class="d-flex align-items-center height-34"><span class="title">Meta Tag Title</span><span class="red">&nbsp;*</span></div>
+                        </div>
+                        <div class="col-md-9">
+                          <div class="input-group">
+                            <input class="form-control" name="meta_title" type="text" required="required"/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-line">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <div class="d-flex align-items-center height-34"><span class="title">Meta Tag Description</span></div>
+                        </div>
+                        <div class="col-md-9">
+                          <div class="input-group">
+                            <textarea class="form-control" name="meta_description" rows="5"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-line">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <div class="d-flex align-items-center height-34"><span class="title">Meta Tag Keywords</span></div>
+                        </div>
+                        <div class="col-md-9">
+                          <div class="input-group">
+                            <textarea class="form-control" name="meta_keywords" rows="5"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </form>
+          </div>
+          <div class="col-12 col-md-2 scroll-col">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="control-panel-save">
+                    <div class="btn-group control-wrapper-save" role="group"><a class="btn-danger btn btn-sm" href="#"><i class="fa fa-arrow-left"></i></a><a class="btn-success btn btn-sm" href="#"><i class="fa fa-floppy-o"></i>&nbsp;&nbsp;Save</a>
+                      <button class="btn btn-group-sm btn-sm btn-success dropdown-toggle" id="btnGroupDrop1" data-toggle="dropdown" aria-haspopup="true" type="button"></button>
+                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btnGroupDrop1"><a class="btn dropdown-items" href="#">... and update</a><a class="btn dropdown-items" href="#">... and new</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <header class="d-flex justify-content-between">
+        <div class="pull-left d-flex align-items-center">
+          <div class="logo-wrapper d-flex align-items-center"><a href="/"><img src="images/tmp/logo.jpg"/></a></div>
+          <div class="menu-toggle-wrapper d-flex align-items-center justify-content-end"><i class="fa fa-bars"></i></div>
+        </div>
+        <div class="float-right d-flex align-items-center">
+          <!-- notify-->
+          <div class="notify-wrapper new"><span class="dropdown"><i class="fa fa-bell dropdown-toggle" id="dropdownNotify" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownNotify">
+                <div class="list-item title"><strong>Notifycations</strong><span class="count">2</span></div>
+                <div class="list-item scroll">
+                  <div class="list-group">
+                    <div class="list-group-item list-group-item-action flex-column align-items-start">
+                      <div class="d-flex w-100 justify-content-between">
+                        <h5>List group item heading</h5><small>3 days ago</small><a class="close" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+                      </div>
+                      <p>Donec id elit non mi porta gravida at eget metus.</p><small>Donec id elit non mi porta.</small>
+                    </div>
+                    <div class="list-group-item list-group-item-action flex-column align-items-start">
+                      <div class="d-flex w-100 justify-content-between">
+                        <h5>List group item heading</h5><small>3 days ago</small><a class="close" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+                      </div>
+                      <p>Donec id elit non mi porta gravida at eget metus. </p><small>Donec id elit non mi porta.</small>
+                    </div>
+                    <div class="list-group-item list-group-item-action flex-column align-items-start">
+                      <div class="d-flex w-100 justify-content-between">
+                        <h5>List group item heading</h5><small>3 days ago</small><a class="close" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+                      </div>
+                      <p>Donec id elit non mi porta gravida at eget metus. </p><small>Donec id elit non mi porta.</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="list-item text-center"><a class="clear_all">Clear all</a></div>
+              </div></span></div>
+          <!-- user wrapper-->
+          <div class="user-wrapper d-flex align-items-center dropdown">
+            <div class="dropdown-toggle d-flex align-items-center" id="dropdownAvatar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <div class="avatar-wrapper"><img src="images/tmp/no-image.gif"/></div>
+            </div>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownAvatar"><a class="dropdown-item" href="#"> <i class="fa fa-user-circle"></i>Profile</a><a class="dropdown-item" href="#"><i class="fa fa-cogs"></i>Settings</a>
+              <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="fa fa-sign-out"></i>Logout</a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <script src="js/libs.js"></script>
+      <script async="async" src="js/admin.js"></script>
+      <script src="js/users_page.js"></script>
+    </div>
+  </body>
+</html>

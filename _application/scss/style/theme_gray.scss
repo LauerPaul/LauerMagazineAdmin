@@ -1,4 +1,9 @@
 /* theme cube gray */
 .wrapper-cube.gray-style {
-		
+	.control-group {
+		.btn:not(:hover) {
+			background: #adb7be;
+			border-color: #adb7be;
+		}
+	}
 }

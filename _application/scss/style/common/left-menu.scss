@@ -1,4 +1,38 @@
 /* left menu */
+body.open-menu {
+	.left-menu {
+		@include media_max_w(#{$_xl - 1}){
+			left: 0;
+		    z-index: 102;
+		}
+	}
+	
+	@include media_max_w(#{$_md}){
+		.mask-mobile-lm {
+			display: block;
+			opacity: 1;
+		}
+	}
+}
+
+.mask-mobile-lm {
+	@include media_min_w(#{$_md - 1}){
+		display: none;
+	}
+	@include media_max_w(#{$_md}){
+		@include transition(opacity 0.2s);
+		position: fixed;
+		display: none;
+		opacity: 0;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		background: rgba(0,0,0,.6);
+	    z-index: 101;
+	}
+}
+
 .left-menu {
 	width: 100%;
 	max-width: $lm-max-width;
@@ -8,22 +42,33 @@
     left: 0;
     top: $w-padding-t-b;
     bottom: 0;
+    padding-top: 5px;
 	@include box-shadow(inset -1px 1px 5px -2px rgba(0,0,0,0.42));
 	
-	// md
+	// media
 	@include media_max_w(#{$_xl - 1}){
-		max-width: $lm-max-width_xl;
 		top: $w-padding-t-b_xl;
+		height: calc(100% - #{$w-padding-t-b_xl});
+		max-width: $lm-max-width_xl;
+		left: -#{$lm-max-width_xl};
+		@include transition(left 0.4s);
+	}
+	//sm
+	@include media_max_w(#{$_md}){
+		top: $w-padding-t-b_sm;
+		height: calc(100% - #{$w-padding-t-b_sm});
 	}
 
 	.wrapper-list {
-			padding: 10px 0px;
+		padding: 10px 0px;
+		max-height: 100%;
 		
 		.item {
 			padding: 7px #{$w-second-padding / 1.5};
 			font-weight: 500;
 			font-size: 1rem;
 			margin-right: 3px;
+			background: rgba(255,255,255,.7);
 
 			// md
 			@include media_max_w(#{$_xl - 1}){
@@ -31,7 +76,7 @@
 			}
 
 			&:hover {
-				background: lighten($border-color-g, 15%);
+				background: lighten($border-color-g, 10%);
 			}
 
 			&.red {
@@ -65,11 +110,53 @@
 				}
 			}
 
-			&.active {
+			a, span {
+				color: $c-gray;
+				text-decoration: none;
+				display: block;
+				outline: none !important;
+				box-shadow: none !important;
+				cursor: pointer;
+
+				&:hover {
+					text-decoration: none;
+				}
+			}
+
+			ul {
+				list-style: none;
+				padding-left: 0px;
+				margin-top: 10px;
+				margin-bottom: 5px;
+				margin-left: -#{$w-second-padding / 1.5};
+				margin-right: -#{$w-second-padding / 1.5};
+				display: none;
+
+				li {
+					padding: 5px #{$w-second-padding / 1.5};
+
+					&:hover {
+						background: lighten($border-color-g, 10%);
+
+						a {
+							color: $black;
+						}
+					}
+				}
+			}
+
+			&.open {
+				ul {
+					display: block;
+				}
+			}
+
+			&.active,
+			&.open {
 				border-left: 4px solid $c-gray;
 				background: lighten($border-color-g, 15%);
-				
-				a {
+
+				a, span {
 					color: $black;
 				}
 
@@ -85,17 +172,12 @@
 				&.green {
 					border-left: 4px solid $green;
 				}
-			}
 
-			a {
-				color: $c-gray;
-				text-decoration: none;
-				display: block;
-				outline: none !important;
-				box-shadow: none !important;
-
-				&:hover {
-					text-decoration: none;
+				ul {
+					a {
+						color: $c-gray;
+						cursor: pointer;
+					}
 				}
 			}
 		}

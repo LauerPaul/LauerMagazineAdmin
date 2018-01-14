@@ -101,3 +101,13 @@
         @content;
     }
 }
+@mixin media_min_w($size){
+    @media (min-width: #{$size}) {
+        @content;
+    }
+}
+@mixin media_mm_w($size, $size_2){
+    @media (max-width: #{$size}) and (min-width: #{$size_2}) {
+        @content;
+    }
+}

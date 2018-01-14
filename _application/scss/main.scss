@@ -13,6 +13,13 @@ dev. Pavel Ugrynovych (Lauer - lauer.com.ua)
 @import "hover";
 @import "include/_mixin";
 /* -------- *Bootstrap END* ----------- */
+/* ------------ plugins --------------- */
+@import "include/scrollPane";
+@import "include/jConfirm";
+@import "include/libs";
+@import "include/bootstrap-select";
+/* ---------- *plugins END* ----------- */
+
 @import "style/theme";
 
 @import "style/common/left-menu";

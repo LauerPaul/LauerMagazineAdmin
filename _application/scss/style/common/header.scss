@@ -6,10 +6,16 @@ header {
 	left: 0;
 	top: 0;
 	right: 0;
+	z-index: 102;
 
 	// md
 	@include media_max_w(#{$_xl - 1}){
 		height: $w-padding-t-b_xl;
+	}
+	
+	//sm
+	@include media_max_w(#{$_md}){
+		height: $w-padding-t-b_sm;
 	}
 
 	// logo wrapper
@@ -17,6 +23,14 @@ header {
 		width: $lm-max-width;
 		height: 100%;
 		padding-left: #{$w-second-padding / 1.5};
+
+		// md
+		@include media_max_w(#{$_xl - 1}){
+			width: $lm-max-width_xl - 60;
+		}
+		@include media_max_w(#{$_md}){
+			width: 115px;
+		}
 
 		a {
 			outline: none;
@@ -29,11 +43,6 @@ header {
 			img {
 				max-height: 100%;
 				max-width: 100%;
-
-				// md
-				@include media_max_w(#{$_xl - 1}){
-					max-width: 70%;
-				}
 			}
 			
 			&:hover {
@@ -51,15 +60,170 @@ header {
 		}
 	}
 
+	.menu-toggle-wrapper {
+		// media
+		@include media_min_w(#{$_xl}){
+			display: none !important;
+		}
+		// md
+		@include media_max_w(#{$_xl - 1}){
+			width: 60px;
+			height: 100%;
+			padding-right: 10px;
+
+			i.fa {
+				font-size: 1.4rem;
+				color: $gray;
+				cursor: pointer;
+	
+				@include media_max_w(#{$_md}){
+					font-size: 1.2rem;
+				}
+
+				&:hover {
+					color: $blue;
+				}
+			}
+
+			@include media_max_w(#{$_md}){
+				width: 35px;
+			}
+		}
+	}
+
 	// notify
 	.notify-wrapper {
 		margin-right: #{$w-padding-t-b/4};
+
+		i.fa.fa-bell {
+			color: $c_gray;
+			cursor: pointer;
+
+			&:hover {
+				color: $blue;
+			}
+
+			&::after { 
+				display: none;
+			}
+		}
+
+		@include media_max_w(#{$_md}){
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+
+		.dropdown-menu {
+			padding: 0px;
+
+			.title {
+				padding: 5px 10px;
+				font-size: 0.75rem;
+				color: $blue;
+			    cursor: default;
+
+				.count {
+					@include border-radius(50%);
+					width: 15px;
+					height: 15px;
+					background: $red;
+					color: $white;
+				    display: inline-block;
+				    text-align: center;
+				    font-size: 0.6rem;
+				    line-height: 1.6;
+				    margin-left: 3px;
+				    cursor: default;
+				}
+			}
+
+			.clear_all {
+				font-size: 0.7rem;
+				color: $c_gray;
+				text-align: right;
+			    padding: 5px 10px;
+			    display: inline-block;
+			    text-decoration: underline;
+			    cursor: pointer;
+			    font-weight: 500;
+				
+				&:hover {
+					color: $blue;
+					text-decoration: none;
+				}
+			}
+
+			.list-group {
+				width: 270px;
+				margin: 0px -1px;
+				border-radius: 0px;
+
+
+				h5 {
+					font-size: 0.8rem;
+					font-weight: bold;
+					
+					&~small {
+						width: 70px;
+						text-align: right;
+						padding-left: 10px;
+						font-weight: bold;
+						font-size: 0.7rem;
+					}
+				}
+
+				a.close {
+				    position: absolute;
+				    right: 4px;
+				    top: 0px;
+				    font-size: 1rem;
+				}
+				
+				small {
+					font-size: 0.8rem;
+					color: $c_gray;
+				}
+
+				p {
+					font-size: 0.8rem;
+					margin-bottom: 5px;
+				}
+			}
+		}
+
+		&.new {
+			i.fa.fa-bell {
+			    position: relative;
+				color: $blue;
+
+				&:hover {
+					color: darken($blue, 10%);
+				}
+
+				&::after {
+					content: '';
+					width: 7px;
+					height: 7px;
+					position: absolute;
+					left: 30%;
+					top: 0%;
+					background: $red;
+					@include border-radius(50%);
+					border: 1px solid $white;
+					display: block;
+				}
+			}
+		}
 	}
 	
 	// user-wrapper
 	.user-wrapper {
 		cursor: pointer;
 		margin: 10px #{$w-padding-t-b/2} 10px #{$w-padding-t-b/4};
+
+		@include media_max_w(#{$_md}){
+			margin: 3px #{$w-padding-t-b/4} 3px #{$w-padding-t-b/4};
+		}
 
 		.dropdown-menu {
 			.dropdown-item {
@@ -89,6 +253,11 @@ header {
 			@include border-radius(50%);
 			overflow: hidden;
 			margin-right: 10px;
+
+			@include media_max_w(#{$_md}){
+				width: $h-avatar-size / 1.5;
+				height: $h-avatar-size / 1.5;
+			}
 
 			> img {
 				width: 100%;

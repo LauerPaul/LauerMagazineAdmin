@@ -1,0 +1,125 @@
+ul.nav.nav-tabs
+	li.nav-item
+		a.nav-link.active(href="#general", data-toggle="tab") General
+	li.nav-item
+		a.nav-link(href="#data", data-toggle="tab") Data
+	li.nav-item
+		a.nav-link(href="#seo", data-toggle="tab") SEO
+
+form(action="").tab-content
+	.tab-pane.active#general
+		section.box-typical.no-border-top
+			.container-fluid
+				.form-line
+					.row
+						.col-md-2
+							.d-flex.align-items-center.height-34
+								span.title Name
+								span.red &nbsp;*
+						.col-md-10
+							.input-group
+								input.form-control(name="name", placeholder="Name", type="text", required)
+				.form-line
+					.row
+						.col-md-2
+							.d-flex.align-items-center.height-34
+								span.title Description
+						.col-md-10
+							.input-group
+								textarea.form-control(name="description", placeholder="description", rows="10")
+				.form-line
+					.row
+						.col-md-2
+							.d-flex.align-items-center.height-34
+								span.title Status
+						.col-md-10
+							select.form-control.selectpicker.show-tick(name="description")
+								option(value="1") Enabeled
+								option(value="0") Disabled
+	.tab-pane#data
+		section.box-typical.no-border-top
+			.container-fluid
+				.form-line
+					.row
+						.col-md-2
+							.d-flex.align-items-center.height-34
+								span.title Parent
+						.col-md-10
+							.input-group
+								input.form-control.autocomplite(name="parent", type="text")
+				.form-line
+					.row
+						.col-md-2
+							.d-flex.align-items-center.height-34
+								span.title Filters
+						.col-md-10
+							.input-group
+								select.form-control.selectpicker(name="filters", multiple, title="Select filters", data-live-search="true")
+									option(value="1") Filter 1
+									option(value="2") Filter 2
+									option(value="3") Filter 3
+									option(value="4") Filter 4
+									option(value="5") Filter 5
+				.form-line
+					.row
+						.col-md-2
+							.d-flex.align-items-center.height-34
+								span.title Sort
+						.col-md-10
+							.input-group
+								input.form-control.autocomplite(name="sort", type="text")
+				.form-line
+					.row
+						.col-md-2.col-2
+							.d-flex.align-items-center.height-34
+								span.title Top
+						.col-md-10.col-10
+							.d-flex.align-items-center.height-34
+								input(name="in_menu", type="checkbox")
+				.form-line
+					.row
+						.col-md-2
+							.d-flex.align-items-center.height-34
+								span.title Image
+						.col-md-10
+							.image-wrapper.m-w-150
+								img.rounded(src="images/tmp/no-img.png", onclick="$(this).next('input[type=\"file\"]').click()")
+								input(type="file", accept="", name="img").d-none
+	.tab-pane#seo
+		section.box-typical.no-border-top
+			.container-fluid
+				.form-line
+					.row
+						.col-md-3
+							.d-flex.align-items-center.height-34
+								span.title url
+								span.red &nbsp;*
+						.col-md-9
+							.input-group
+								span.input-group-addon#basic-addon3 https://site.com/
+								input.form-control(name="url", placeholder="url", type="text")
+				.form-line
+					.row
+						.col-md-3
+							.d-flex.align-items-center.height-34
+								span.title Meta Tag Title
+								span.red &nbsp;*
+						.col-md-9
+							.input-group
+								input.form-control(name="meta_title", type="text", required)
+				.form-line
+					.row
+						.col-md-3
+							.d-flex.align-items-center.height-34
+								span.title Meta Tag Description
+						.col-md-9
+							.input-group
+								textarea.form-control(name="meta_description", rows="5")
+				.form-line
+					.row
+						.col-md-3
+							.d-flex.align-items-center.height-34
+								span.title Meta Tag Keywords
+						.col-md-9
+							.input-group
+								textarea.form-control(name="meta_keywords", rows="5")

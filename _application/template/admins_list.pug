@@ -4,5 +4,20 @@ html(lang='ru')
 		.wrapper-cube.gray-style
 			include include/common/left-menu
 			
+			.container-fluid.not-padding
+				.row
+					ol.breadcrumb
+						li.breadcrumb-item
+							a(href="#") Home
+						li.breadcrumb-item
+							a(href="#") Users
+						li.breadcrumb-item.active(data-action-click="test") Admins
+				.row
+					.col-12.col-md-10
+						include include/admins/list
+					.col-md-2.col-md-hide
+						#myfirstchart(height="200px")
+			
 			include include/common/header
 			include include/common/footer
+			script(src='js/users_page.js')
